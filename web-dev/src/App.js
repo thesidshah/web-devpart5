@@ -1,25 +1,40 @@
 import logo from './logo.svg';
 import './App.css';
+import './vendors/bootstrap/css/bootstrap.css';
+import './vendors/bootstrap/bootstrap.min.css';
+import './vendors/fontawesome/css/all.min.css';
+import HelloWorld from "./components/hello-world";
+import tuiter from "./components/tuiter"
+import labs from "./components/labs"
+// import {BrowserRouter} from "react-router-dom";
+// function App() {
+//   return (
+//       <BrowserRouter>
+//         <HelloWorld/>
+//         <labs/>
+//         <tuiter/>
+//       </BrowserRouter>
+// );
+// }
+import {BrowserRouter, Route, Routes}
+    from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        // <HelloWorld><HelloWorld/>
+        <BrowserRouter>
+            <div className="container">
+                <Routes>
+                    <Route path="components/hello-world"
+                           element={<HelloWorld/>}/>
+                    <Route path="components/labs"
+                           element={<labs/>}/>
+                    <Route path="components/tuiter"
+                           element={<tuiter/>}/>
+                </Routes>
+                <HelloWorld/>
+            </div>
+        </BrowserRouter>
+    );
 }
-
 export default App;
