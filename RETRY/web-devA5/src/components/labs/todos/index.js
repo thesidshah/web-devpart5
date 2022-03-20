@@ -13,3 +13,13 @@ import TodoList from "./TodoList.js";
 //         ${TodoList()}
 //     </div>
 // `);
+const Todos = () => {
+    return (
+        <>
+        <h1>Todo example</h1>
+        <TodoList/>
+        </>
+        )
+};
+
+export default Todos;

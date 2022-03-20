@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import Classes from "./classes";
 import Styles from "./styles";
 import ConditionalOutput from "./conditional-output";
+import Todos from "./todos";
 const Labs = () => {
     return(
         <>
@@ -13,9 +14,11 @@ const Labs = () => {
             <Link to="/tuiter">
                 Tuiter
             </Link>
+
             <ConditionalOutput/>
             <Styles/>
             <Classes/>
+            <Todos/>
         </>
     )
 };
