@@ -1,5 +1,5 @@
 // import TodoItem from "./TodoItem.js";
-// import todos from "./todosa.js";
+// import todos from "./todos.js";
 // const TodoList = () => {
 //     return(`
 //  <ul>
@@ -13,11 +13,23 @@
 // }
 // export default TodoList;
 import TodoItem from "./TodoItem.js";
-import todosa from "./todosa.js";
+import todos from "./todos.js";
 const TodoList = () => {
     return(
-            <ul>
-                <TodoItem todos={todosa}/>
-        </ul>);
+            // <ul>
+            //     <TodoItem todos={todos}/>
+            //     todos.map(todo => {return(<TodoItem todo={todo}/>);})
+            //
+            // </ul>
+        <>
+        {
+            todos.map(todo => {
+                return(
+                    <TodoItem todo={todo}/>
+                );
+            })
+        }
+        </>
+    );
 }
 export default TodoList;

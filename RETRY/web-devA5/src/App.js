@@ -8,6 +8,8 @@ import './vendors/fontawesome/css/all.min.css';
 import HelloWorld from "./components/hello-world";
 import Labs from "./components/labs";
 import Tuiter from "./components/tuiter";
+import HomeScreen from "./components/tuiter/HomeScreen/HomeScreen";
+import ExploreScreen from "./components/tuiter/ExploreScreen/ExploreScreen";
 
 
 // function App() {
@@ -62,7 +64,10 @@ function App() {
                     <Route path="/labs"
                            element={<Labs/>}/>
                     <Route path="/tuiter"
-                           element={<Tuiter/>}/>
+                           element={<Tuiter activeItem="Home"/>}/>
+                    <Route path="/tuiter/home" element={<HomeScreen/>}/>
+                    <Route path="/tuiter/explore" element={<ExploreScreen/>}/>
+
                 </Routes>
             </div>
         </BrowserRouter>
